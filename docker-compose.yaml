@@ -1,0 +1,18 @@
+version: "3.1"
+
+services:
+  mysql-container:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: teste123
+      MYSQL_DATABASE: spring
+      MYSQL_USER: fernando
+      MYSQL_PASSWORD: teste123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
